@@ -1,12 +1,7 @@
 ##############################
 Python Speech Recognition Media Center
-py-SMC
+py-smc
 ##############################
-
-#############
-Dependencies
-sox
-#############
 
 TODO:
 Sensors to monitor the hardware temp
