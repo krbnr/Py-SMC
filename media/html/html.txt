@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+        <title>AIC - Movies</title>
+            <style>
+                #container {{
+                    height:278px;
+                    width:184px;
+                    float: left;
+                    background-color: black;
+                    position:relative;
+                    margin: 10px 10px;
+                }}
+
+                #image {{
+                    position:absolute;
+                    border-radius: 5px;
+                    left:0;
+                    top:0;
+                }}
+                #Title {{
+                    z-index:100;
+                    background-color: rgba(0, 0, 0, 0.78);
+                    min-height: 18px;
+                    border: 1px solid rgb(124, 124, 124);
+                    border-right: none;
+                    border-left: none;
+                    position:absolute;
+                    color:white;
+                    font-size:24px;
+                    font-weight:bold;
+                    text-align: center;
+                    width: 100%;
+                    top: 230px;
+
+                }}
+                .Num {{
+                    padding: 0 55px;
+                    background-color: rgba(0, 0, 0, 0.55);
+                    color: rgb(81, 0, 202);
+                    font-size: 26px;
+                    border-radius: 3px;
+                }}
+            </style>
+        </head>
+        <body style="background-color: black;">
+            <div style="background-color: white; width: 100%;">
+       {0}     
+	</div>
+</body>
+</html>
