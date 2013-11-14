@@ -9,7 +9,7 @@ sox
 #############
 
 TODO:
-Senesors to monitor the hardware temp
+Sensors to monitor the hardware temp
 sudo apt-get install lm-sensors
 sudo sensors-detect
 
