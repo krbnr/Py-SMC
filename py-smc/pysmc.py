@@ -1,9 +1,8 @@
 import stream_manager
 
 
-
 if __name__ == "__main__":
-    #Main funct
+    #Main
     stream_manager.Listen()
 
 

@@ -10,13 +10,6 @@ def GenerateHtml():
     """
     images = ""
     movieNumber = {}
-    containerBlock = """
-                    <div id="container">
-                        <img style="width:184px; height:278px" id="image" src="{0}"/>
-                        <p id="Title"><span class="Num">{1}</span>
-                        </p>
-                    </div>
-                    """
     i = 1
     # for each image in folder create an html block
     for imgFile in glob.glob("../media/movies-images/*.jpg"):
@@ -52,3 +45,10 @@ def ReproduceVideo(movieNumber):
     os.chdir(currdir)
     #TODO chekc if the movie run correctly
 
+containerBlock = """
+                    <div id="container">
+                        <img style="width:184px; height:278px" id="image" src="{0}"/>
+                        <p id="Title"><span class="Num">{1}</span>
+                        </p>
+                    </div>
+                    """

@@ -19,6 +19,7 @@ def DecodeGoogleSpeech():
     """
     speech = subprocess.Popen(["rec", "-c", "1", "-r", "16000", "-b", "16", "../media/audio/spch.flac", "trim", "0", "5"],
                               stdout=subprocess.PIPE)
+    # TODO: and check if is possible to save the flac on
 
     output, err = speech.communicate()
     # TODO: check if output is correct

@@ -10,8 +10,6 @@ import pyaudio
 #Assuming Energy threshold upper than 30 dB
 threshold = 30
 
-
-
 chunk = 4096    # num of frames
 frmat = pyaudio.paInt16     # format
 CHANNELS = 1
@@ -22,11 +20,9 @@ silence = True
 FileNameTmp = 'tmp.wav'
 
 
-
-
 def WriteSpeech(p, stream, writeData):
     """
-    Write stream into disk .wav file
+    Write stream .wav file
     """
     stream.stop_stream()
     p.terminate()
@@ -37,8 +33,6 @@ def WriteSpeech(p, stream, writeData):
     wf.setframerate(RATE)
     wf.writeframes(writeData)
     wf.close()
-
-
 
 
 def Record(stream):
@@ -108,8 +102,7 @@ def Record(stream):
                     if rms_value > threshold:
                         silence = False
                         print "Recording...."
-                        # TODO this method should no be the same as record, and check if not recording the audio is possible
+                        # TODO this method should be the same as record with different args,
                         google_web_service.CmdRecord(success)
             # if the user does not select any movie listen again
             stream_manager.Listen()
-

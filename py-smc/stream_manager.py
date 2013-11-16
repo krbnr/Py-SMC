@@ -7,7 +7,12 @@ import ui_manager
 
 
 def Listen():
-
+    """
+    PyAudio is a Python interface to PortAudio. Provides methods to:
+    initialize and terminate PortAudio
+    open and close streams
+    PortAudio is a free, cross-platform, open-source, audio I/O library.
+    """
     #Assuming Energy threshold upper than 30 dB
     threshold = 30
 
@@ -16,14 +21,8 @@ def Listen():
     chnls = 1
     rate = 16000
     silence = True
-
-    p = pyaudio.PyAudio()
     p = pyaudio.PyAudio()
 
-    #PyAudio is a Python interface to PortAudio. Provides methods to:
-    #initialize and terminate PortAudio
-    #open and close streams
-    #PortAudio is a free, cross-platform, open-source, audio I/O library.
 
 
     stream = p.open(format=frmat,
@@ -113,16 +112,6 @@ def CheckCommand(utterance):
 
 def CheckSecondCommand(utterance, commandType):
 
-    moviesEnum = {
-    'one':'1',
-    'two':'2',
-    'three':'3',
-    'four':'4',
-    'five':'5',
-    'six':'6',
-    'seven':'7'
-    }
-
     if commandType == "movie":
         if 'number' in utterance:
             movieNumber = utterance.rsplit(' ', 1)[1]
@@ -143,3 +132,14 @@ def CheckSecondCommand(utterance, commandType):
     elif commandType == "sleep":
         # TODO go to sleep
         pass
+
+
+moviesEnum = {
+    'one':'1',
+    'two':'2',
+    'three':'3',
+    'four':'4',
+    'five':'5',
+    'six':'6',
+    'seven':'7'
+    }
